@@ -1,0 +1,63 @@
+[
+    {
+      "id": 201,
+      "name": "J.B. Lippincott & Co.",
+      "location": "Philadelphia",
+      "contactEmail": "info@lippincott.com"
+    },
+    {
+      "id": 202,
+      "name": "Secker & Warburg",
+      "location": "London",
+      "contactEmail": "info@seckerwarburg.com"
+    },
+    {
+      "id": 203,
+      "name": "T. Egerton",
+      "location": "Whitehall",
+      "contactEmail": "info@tegerton.com"
+    },
+    {
+      "id": 204,
+      "name": "Charles Scribner's Sons",
+      "location": "New York",
+      "contactEmail": "info@scribners.com"
+    },
+    {
+      "id": 205,
+      "name": "Harper & Brothers",
+      "location": "New York",
+      "contactEmail": "info@harperbrothers.com"
+    },
+    {
+      "id": 206,
+      "name": "The Russian Messenger",
+      "location": "Moscow",
+      "contactEmail": "info@russianmessenger.com"
+    },
+    {
+      "id": 207,
+      "name": "Little, Brown and Company",
+      "location": "Boston",
+      "contactEmail": "info@littlebrown.com"
+    },
+    {
+      "id": 208,
+      "name": "George Allen & Unwin",
+      "location": "London",
+      "contactEmail": "info@allenunwin.com"
+    },
+    {
+      "id": 209,
+      "name": "Ballantine Books",
+      "location": "New York",
+      "contactEmail": "info@ballantinebooks.com"
+    },
+    {
+      "id": 210,
+      "name": "Ancient Texts Publishing",
+      "location": "Athens",
+      "contactEmail": "info@ancienttexts.com"
+    }
+  ]
+  
