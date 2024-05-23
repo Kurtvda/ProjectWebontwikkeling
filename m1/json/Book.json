@@ -8,7 +8,7 @@
       "publicationDate": "1960-07-11",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/To_Kill_a_Mockingbird.jpg",
       "genre": "fiction",
-      "authors": ["Harper Lee"],
+      "authors": ["Harper Lee", "Alice Johnson"],
       "publisherId": 201
     },
     {
@@ -20,7 +20,7 @@
       "publicationDate": "1949-06-08",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/1984.jpg",
       "genre": "dystopian",
-      "authors": ["George Orwell"],
+      "authors": ["George Orwell", "Eric Blair"],
       "publisherId": 202
     },
     {
@@ -32,7 +32,7 @@
       "publicationDate": "1813-01-28",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/Pride_and_Prejudice.jpg",
       "genre": "romance",
-      "authors": ["Jane Austen"],
+      "authors": ["Jane Austen", "Emily Bronte"],
       "publisherId": 203
     },
     {
@@ -44,7 +44,7 @@
       "publicationDate": "1925-04-10",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/The_Great_Gatsby_Cove.jpg",
       "genre": "tragedy",
-      "authors": ["F. Scott Fitzgerald"],
+      "authors": ["F. Scott Fitzgerald", "Thomas Wolfe"],
       "publisherId": 204
     },
     {
@@ -56,7 +56,7 @@
       "publicationDate": "1851-10-18",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/Moby_Dick.jpg",
       "genre": "adventure",
-      "authors": ["Herman Melville"],
+      "authors": ["Herman Melville", "Nathaniel Hawthorne"],
       "publisherId": 205
     },
     {
@@ -68,7 +68,7 @@
       "publicationDate": "1869-01-01",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/War_and_Peace.jpg",
       "genre": "historical",
-      "authors": ["Leo Tolstoy"],
+      "authors": ["Leo Tolstoy", "Fyodor Dostoevsky"],
       "publisherId": 206
     },
     {
@@ -80,7 +80,7 @@
       "publicationDate": "1951-07-16",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/The_Catcher_in_the_Rye.jpg",
       "genre": "realistic fiction",
-      "authors": ["J.D. Salinger"],
+      "authors": ["J.D. Salinger", "Jerome David"],
       "publisherId": 207
     },
     {
@@ -92,7 +92,7 @@
       "publicationDate": "1937-09-21",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/The_Hobbit.jpg",
       "genre": "fantasy",
-      "authors": ["J.R.R. Tolkien"],
+      "authors": ["J.R.R. Tolkien", "C.S. Lewis"],
       "publisherId": 208
     },
     {
@@ -104,19 +104,19 @@
       "publicationDate": "1953-10-19",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/Fahrenheit_451.jpg",
       "genre": "dystopian",
-      "authors": ["Ray Bradbury"],
+      "authors": ["Ray Bradbury", "Kurt Vonnegut"],
       "publisherId": 209
     },
     {
       "id": 10,
       "title": "The Odyssey",
       "description": "An ancient Greek epic poem attributed to Homer. It is one of the oldest works of literature and tells the story of Odysseus' journey home after the Trojan War.",
-      "publicationYear": -800,
+      "publicationYear": 1614,
       "isAvailable": true,
-      "publicationDate": "-800-01-01",
+      "publicationDate": "1614-01-01",
       "coverImageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/images/The_Odyssey.jpg",
       "genre": "epic",
-      "authors": ["Homer"],
+      "authors": ["Homer", "Robert Fitzgerald"],
       "publisherId": 210
     }
   ]
