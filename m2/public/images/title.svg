@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="308" height="55" viewBox="0 0 308 55">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="308" height="55" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_2" data-name="Repeat Grid 2" clip-path="url(#clip-path)">
+    <g transform="translate(-43 -76)">
+      <text id="Food_Encounter" data-name="Food Encounter" transform="translate(44 77)" fill="#fff" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="43">Food En</tspan><tspan y="43" fill="#707070">counter</tspan></text>
+    </g>
+  </g>
+</svg>

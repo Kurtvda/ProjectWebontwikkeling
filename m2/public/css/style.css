@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray: #707070;
+    --dark_green: #568C1F;
+    --green: #8CBF1F;
+  }
+
+.hidden{
+    display: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(200px, 22.5vw) 77.5vw;
+    grid-template-rows: minmax(72px, 11vh) 89vh;
+    grid-template-areas:
+    "nav header"
+    "nav main"; 
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+header {
+    grid-area: header;
+    box-shadow: 0px 4px 6px #00000029;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+  
+nav {
+    grid-area: nav;
+    height: 100vh;
+    min-width: 100px;
+
+    color: var(--unnamed-color-242625);
+    text-align: left;
+    font: normal normal 600 27px/37px Segoe UI;
+    letter-spacing: 0px;
+    color: #242625;
+    display: flex;
+    flex-flow: column nowrap;
+    box-shadow: inset -4px 0px 6px #00000029;
+}
+.navItem{
+    height: 37px;
+    text-align: left;
+    text-decoration: none;
+    color: var(--gray);
+    padding: 0 10%;
+    margin-top: 50px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navItem:nth-of-type(1){
+    margin-top: 25px;
+}
+.navLogo{
+    width: 28px;
+    height: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: .1s;
+}
+
+#logoHouse{
+    background-image: url("../images/house.svg"); 
+}
+#logoHouseActive{
+    background-image: url("../images/house-fill.svg"); 
+}
+.navItem:hover #logoHouse{
+    background-image: url("../images/house-fill.svg"); 
+}
+#logoBasket{
+    background-image: url("../images/basket.svg");
+}
+#logoBasketActive{
+    background-image: url("../images/basket-fill.svg");
+}
+.navItem:hover #logoBasket{
+    background-image: url("../images/basket-fill.svg"); 
+}
+#logoFile{
+    background-image: url("../images/file-bar-graph.svg");
+}
+#logoFileActive{
+    background-image: url("../images/file-bar-graph-fill.svg");
+}
+.navItem:hover #logoFile{
+    background-image: url("../images/file-bar-graph-fill.svg"); 
+}
+
+main {
+    grid-area: main;
+    height: 100vh;
+}
+
+
+#title{
+    background-image: url(../images/title.svg);
+    width: 308px;
+    height: 55px;
+    margin: 2px 0 0 -5px;
+}
+#titleArrow{
+    background-image: url(../images/titleArrow.svg); 
+    width: 150px;
+    height: 72px;
+}
+.logo{   
+    background-repeat: no-repeat;
+    position: absolute;
+}
+#logoContainer{
+    margin: 0 0 0 37px;
+    height: 72px;
+    width: 100%;
+}
+@keyframes arrowAnim{
+    from {
+        width: 0;
+      }
+    
+      to {
+        width: 150px;
+      }
+}

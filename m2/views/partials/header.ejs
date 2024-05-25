@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Encounter</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body class="--bs-danger">
+    <header class="row">
+        <div id="logoContainer">
+            <div id="titleArrow" class="logo"></div>
+            <div id="title" class="logo"></div>
+        </div>
+        <h1 class="hidden">Food Encounter</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" class="navItem">
+                    Home<div id="<%= activeLink === 'home' ? 'logoHouseActive' : 'logoHouse' %>" class="navLogo"></div>
+                </a>
+            </li>
+            <li>
+                <a href="/products" class="navItem">
+                    Products<div id="<%= activeLink === 'products' ? 'logoBasketActive' : 'logoBasket' %>" class="navLogo"></div>
+                </a>
+            </li>
+            <li>
+                <a href="/nutrients" class="navItem">
+                    Nutrients<div id="<%= activeLink === 'nutrients' ? 'logoFileActive' : 'logoFile' %>" class="navLogo"></div>
+                </a>
+            </li>
+          </ul>
+    </nav>
+    <main>

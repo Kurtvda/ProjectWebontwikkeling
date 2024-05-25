@@ -1,0 +1,83 @@
+[
+    {
+        "id": 101,
+        "carbohydrates": 14,
+        "fats": 0.2,
+        "fiber": 2.4,
+        "vitaminC": 4.6,
+        "origin": "Netherlands"
+    },
+    {
+        "id": 102,
+        "carbohydrates": 23,
+        "fats": 0.3,
+        "fiber": 2.6,
+        "vitaminC": 8.7,
+        "origin": "Ecuador"
+    },
+    {
+        "id": 103,
+        "carbohydrates": 0,
+        "fats": 3.6,
+        "fiber": 0,
+        "vitaminC": 0,
+        "origin": "Belgium"
+    },
+    {
+        "id": 104,
+        "carbohydrates": 7,
+        "fats": 0.4,
+        "fiber": 2.6,
+        "vitaminC": 89.2,
+        "origin": "Netherlands"
+    },
+    {
+        "id": 105,
+        "carbohydrates": 0,
+        "fats": 13,
+        "fiber": 0,
+        "vitaminC": 0,
+        "origin": "Norway"
+    },
+    {
+        "id": 106,
+        "carbohydrates": 22,
+        "fats": 49,
+        "fiber": 12,
+        "vitaminC": 0,
+        "origin": "California"
+    },
+    {
+        "id": 107,
+        "carbohydrates": 3.6,
+        "fats": 0.4,
+        "fiber": 0,
+        "vitaminC": 1.4,
+        "origin": "Netherlands"
+    },
+    {
+        "id": 108,
+        "carbohydrates": 20,
+        "fats": 0.1,
+        "fiber": 3,
+        "vitaminC": 2.4,
+        "origin": "United States"
+    },
+    {
+        "id": 109,
+        "carbohydrates": 41,
+        "fats": 4.2,
+        "fiber": 7,
+        "vitaminC": 0,
+        "origin": "Netherlands"
+    },
+    {
+        "id": 110,
+        "carbohydrates": 9,
+        "fats": 15,
+        "fiber": 7,
+        "vitaminC": 10,
+        "origin": "Mexico"
+    }
+]
+    
