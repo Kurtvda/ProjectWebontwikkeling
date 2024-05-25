@@ -1,32 +1,4 @@
 <%- include("partials/header") %>
-<table>
-    <thead>
-      <tr>
-        <th>image</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Calories</th>
-        <th>Protein</th>
-        <th>Type</th>
-        <th>Date of Intake</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody id="foodTableBody">
-        <% for(let prod of product){%>
-            <tr>
-                <td><img src="<%= prod.imageUrl %>" width="100"></td>
-                <td><%= prod.name %></td>
-                <td><%= prod.description %></td>
-                <td><%= prod.calories %></td>
-                <td><%= prod.protein %></td>
-                <td><%= prod.type %></td>
-                <td><%= prod.dateOfIntake %></td>
-                <td><button>Action</button></td>
-            </tr>
-            <%}%>
-    </tbody>
-  </table>
 
 <script src="/js/logoAnimation.js"></script>
 <%- include("partials/footer") %>

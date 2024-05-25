@@ -14,6 +14,26 @@
     display: none;
 }
 
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border-radius: 10px;
+}
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dark_green);
+}
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
 body {
     display: grid;
     grid-template-columns: minmax(200px, 22.5vw) 77.5vw;
@@ -102,7 +122,8 @@ nav {
 
 main {
     grid-area: main;
-    height: 100vh;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 
@@ -134,4 +155,82 @@ main {
       to {
         width: 150px;
       }
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+  overflow: visible;
+}
+
+td{
+    font: normal normal 500 16px/25px Segoe UI;
+    letter-spacing: 0px;
+}
+
+th, td {
+  /* border: 1px solid #ddd; */
+  padding: 10px;
+  text-align: center;
+  color: #707070;
+}
+
+td:nth-of-type(3){
+    text-align: left;
+    font-weight: 400;
+}
+
+.tdContainer{
+    margin: 0 auto;
+    width: 80%;
+}
+
+th {
+    background-color: var(--green);
+
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+
+    font: normal normal 600 18px/20px Segoe UI;
+    letter-spacing: 0px;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+   
+    background-color: hsl(85, 50%, 95%);
+  }
+  
+  tr:hover {
+ 
+    background-color: hsl(85, 50%, 90%);
+  }
+
+.mainImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.typeIcon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+button {
+  background-color: var(--green);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .1s;
+}
+
+button:hover {
+  background-color: var(--dark_green);
 }

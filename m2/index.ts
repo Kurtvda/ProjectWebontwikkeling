@@ -1,12 +1,47 @@
 import express from "express";
 import ejs from "ejs";
 
-import products from './public/json/foodProducts.json';
-import nutritions from "./public/json/nutrition.json";
 import { ProductI, NutritionI } from './Interfaces';
+import { promises } from "dns";
 
-const product : ProductI[] = products;
-const nutrition : NutritionI[] = nutritions;
+async function fetchProduct() : Promise<ProductI[]> {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/json/foodProducts.json');
+    if (response.status === 404) throw new Error('Not found');
+    if (response.status === 500) throw new Error('Internal server error');
+    return await response.json();
+  } catch (error: any) {
+    console.log(error);
+    return [];
+  }
+}
+async function fetchNutrition() : Promise<NutritionI[]> {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/json/nutrition.json');
+    if (response.status === 404) throw new Error('Not found');
+    if (response.status === 500) throw new Error('Internal server error');
+    return await response.json();
+  } catch (error: any) {
+    console.log(error);
+    return [];
+  }
+}
+
+let product: ProductI[] = [];
+let nutrition: NutritionI[] = [];
+
+fetchProduct().then((data) => {
+  product = data;
+}).catch((error) => {
+  console.log(error);
+});
+
+fetchNutrition().then((data) => {
+  nutrition = data;
+}).catch((error) => {
+  console.log(error);
+});
+
 
 const app = express();
 

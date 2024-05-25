@@ -7,7 +7,7 @@
     "protein": 0.3,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/apple.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/apple.jpg",
     "type": "Fruit",
     "tags": ["healthy", "snack", "fruit"],
     "nutritionalInfoId": 101
@@ -20,7 +20,7 @@
     "protein": 1.1,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/banana.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/banana.jpg",
     "type": "Fruit",
     "tags": ["energy", "fruit", "fiber-rich"],
     "nutritionalInfoId": 102
@@ -33,7 +33,7 @@
     "protein": 31,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/chicken_breast.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/chicken.jpg",
     "type": "Meat",
     "tags": ["high protein", "meat", "lean"],
     "nutritionalInfoId": 103
@@ -46,7 +46,7 @@
     "protein": 2.8,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/broccoli.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/broccoli.jpg",
     "type": "Vegetable",
     "tags": ["healthy", "vegetable", "fiber-rich"],
     "nutritionalInfoId": 104
@@ -59,7 +59,7 @@
     "protein": 20,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/salmon.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/salmon.jpg",
     "type": "Fish",
     "tags": ["high protein", "fish", "omega-3"],
     "nutritionalInfoId": 105
@@ -72,7 +72,7 @@
     "protein": 21,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/almonds.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/almond.jpg",
     "type": "Nuts",
     "tags": ["healthy", "nuts", "high protein"],
     "nutritionalInfoId": 106
@@ -85,7 +85,7 @@
     "protein": 10,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/yogurt.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/yoghurt.jpg",
     "type": "Dairy",
     "tags": ["healthy", "dairy", "high protein"],
     "nutritionalInfoId": 107
@@ -98,7 +98,7 @@
     "protein": 1.6,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/sweet_potato.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/potato.jpg",
     "type": "Vegetable",
     "tags": ["healthy", "vegetable", "fiber-rich"],
     "nutritionalInfoId": 108
@@ -111,7 +111,7 @@
     "protein": 12,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/whole_wheat_bread.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/bread.jpg",
     "type": "Grain",
     "tags": ["fiber-rich", "grain", "healthy"],
     "nutritionalInfoId": 109
@@ -124,7 +124,7 @@
     "protein": 2,
     "isActive": true,
     "dateOfIntake": "2023-05-24",
-    "imageUrl": "https://example.com/images/avocado.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/avocado.jpg",
     "type": "Fruit",
     "tags": ["healthy", "fruit", "healthy fats"],
     "nutritionalInfoId": 110

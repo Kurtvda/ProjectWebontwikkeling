@@ -1,3 +1,30 @@
 <%- include("partials/header") %>
-
+<table>
+    <thead>
+        <tr>
+        <th>image</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Calories</th>
+        <th>Protein</th>
+        <th>Type</th>
+        <th>Date of Intake</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="foodTableBody">
+        <% for(let prod of product){%>
+            <tr>
+                <td><img class="mainImage" src="<%= prod.imageUrl %>"></td>
+                <td><%= prod.name %></td>
+                <td><div class="tdContainer"><%= prod.description %></div></td>
+                <td><%= prod.calories %></td>
+                <td><%= prod.protein %></td>
+                <td><img class="typeIcon" src="./images/<%=prod.type%>_icon.svg" width="40"></td>
+                <td><%= prod.dateOfIntake %></td>
+                <td><button>Action</button></td>
+            </tr>
+        <%}%>
+    </tbody>
+</table>
 <%- include("partials/footer") %>
