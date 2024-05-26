@@ -14,6 +14,10 @@
     display: none;
 }
 
+.center{
+    margin: 0 auto;
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
     width: 8px;
@@ -127,11 +131,23 @@ main {
 }
 
 h1{
-    font: normal normal 700 46px/50px Segoe UI;
+    font: normal normal 700 90px/50px Segoe UI;
     color: #707070;
     width: 95%;
-    margin: 60px auto 40px;
+    margin: 70px auto 50px;
+    text-transform: capitalize;
 }
+#titleProducts{
+    margin: 70px auto 60px;
+}
+#titleDateToday{
+    font: normal normal 500 48px/25px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    width: 93.5%;
+    margin: 0 auto 100px;
+}
+
 
 #title{
     background-image: url(../images/title.svg);
@@ -244,7 +260,6 @@ button:hover {
     width: 15px;
     height: 15px;
     border-radius: 7.5px;
-    margin: 0 auto;
 }
 .circleRed {
     background-color: #E57373; /* lighter dark red */
@@ -271,12 +286,11 @@ button:hover {
     background-color: #BEBEBE; /* lighter dark grey */
 }
 
-
-#consumptionSubTitle{
+#consumptionSubTitle, #productsSubTitle, .instructionText{
     font: normal normal 500 20px/25px Segoe UI;
     letter-spacing: 0px;
     color: #707070;
-    width: 93.5%;
+    width: 90%;
     margin: 0 auto 10px;
 }
 #totalList li{
@@ -284,9 +298,91 @@ button:hover {
     list-style: none;
     letter-spacing: 0px;
     color: #707070;
-    width: 90%;
+    width: 87%;
     margin: 0 auto;
 }
 #totalList{
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+}
+
+#typeDescription, #instruction{
+    width: 88%;
+    margin: 0 auto;
+}
+#productsSubTitle{
+    padding-top: 20px;
+}
+#typeDescription li{
+    display: flex;
+    flex-flow: row nowrap;
+
+    font: normal normal 500 16px/12px Segoe UI;
+    list-style: none;
+    letter-spacing: 0px;
+    color: #707070;
+    width: 87%;
+    margin-bottom: 10px;
+}
+#typeDescription li:nth-of-type(1){
+    margin-top: 20px;
+}
+#typeDescription li div{
+    margin-right: 15px;
+}
+
+#instruction li {
+    font: normal normal 500 16px/25px Segoe UI;
+    list-style: none;
+    letter-spacing: 0px;
+    color: #707070;
+    margin-bottom: 10px;
+}
+
+.instructionText{
+    margin: 0 auto 30px;
+}
+.instructionText:nth-of-type(2), .instructionTextInNutr{
+    margin: 20px auto 10px;
+}
+.instructionText:nth-of-type(2){
+    margin: 20px auto 50px;
+}
+#searchContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 90%;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+
+#searchForm {
+    display: flex;
+    width: 25%;
+}
+
+#searchBar {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--green);
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+
+    font: normal normal 500 16px/12px Segoe UI;
+    letter-spacing: 0px;
+}
+
+#searchForm button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: var(--green);
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+
+    font: normal normal 500 16px/12px Segoe UI;
+    letter-spacing: 0px;
+}
+
+#searchBar:active, #searchBar:focus{
+    outline: none;
 }

@@ -78,6 +78,14 @@
         "fiber": 7,
         "vitaminC": 10,
         "origin": "Mexico"
+    },
+    {
+        "id": 110,
+        "carbohydrates": 17,
+        "fats": 0.1,
+        "fiber": 2.2,
+        "vitaminC": 19.7,
+        "origin": "United States"
     }
 ]
     

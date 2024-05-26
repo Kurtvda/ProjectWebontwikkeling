@@ -5,10 +5,10 @@ export function DateToday() : string {
     const day = currentDate.getDate();
 
     if(month < 10){
-        return `${day}-0${month}-${year}`;
+        return `${day}/0${month}/${year}`;
     }
     else{
-        return `${day}-${month}-${year}`;
+        return `${day}/${month}/${year}`;
     }
     
 }

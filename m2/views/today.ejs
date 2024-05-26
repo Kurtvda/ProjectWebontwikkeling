@@ -1,0 +1,48 @@
+<%- include("partials/header") %>
+<h1>Your meals today</h1>
+<p id="titleDateToday"><%= date %></p>
+<h2 id="consumptionSubTitle">You have consumed a total of:</h2>
+<ul id="totalList">
+    <% for(let i = 0; i < intakeToday.length; i++){%>
+        <li>
+            <%= intakeToday[i] %>
+        </li>
+    <%}%>
+</ul>
+
+<table>
+    <thead>
+        <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Calories</th>
+        <th>Protein</th>
+        <th>Carbohydrates</th>
+        <th>Fats</th>
+        <th>Fiber</th>
+        <th>Vitamin C</th>
+        </tr>
+    </thead>
+   
+    <tbody id="foodTableBody">
+        <% for(let product of products){%>
+            <% if(product.dateOfIntake == date){%>  
+            <tr>
+                <td><img class="mainImage" src="<%= product.imageUrl %>"></td>
+                <td><%= product.name %></td>
+                <td><%= product.calories %></td>
+                <td><%= product.protein %></td>
+                <% for(let nutrition of nutritions){%>
+                    <% if(product.nutritionalInfoId == nutrition.id){%>
+                    <td><%= nutrition.carbohydrates %></td>
+                    <td><%= nutrition.fats %></td>
+                    <td><%= nutrition.fiber %></td>
+                    <td><%= nutrition.vitaminC %></td>
+                    <%}%>
+                <%}%>
+            </tr>
+            <%}%>
+        <%}%>
+    </tbody>
+</table>
+<%- include("partials/footer") %>

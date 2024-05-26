@@ -1,47 +1,95 @@
 <%- include("partials/header") %>
-<h1>Your meals today <%= date %></h1>
-<p id="consumptionSubTitle">You have consumed a total of:</p>
-<ul id="totalList">
-    <% for(let i = 0; i < intakeToday.length; i++){%>
-        <li>
-            <%= intakeToday[i] %>
-        </li>
-    <%}%>
-</ul>
+<%
+    function getTypeColor(type) {
+        switch (type) {
+        case "Meat":
+            return "circleRed";
+        case "Fruit":
+            return "circleOrange";
+        case "Vegetable":
+            return "circleGreen";
+        case "Fish":
+            return "circleBlue";
+        case "Nuts":
+            return "circleBrown";
+        case "Dairy":
+            return "circleWhite";
+        case "Grain":
+            return "circleYellow";
+        default:
+            return "";
+        }
+    }
+%>
+<h1 id="titleProducts">Pick your Meal</h1>
+<p class="instructionText">Welcome to Food Encounter! Follow these simple steps to track your daily nutrition:</p>
 
+<ol id="instruction">
+    <li><strong>Pick a Product:</strong> Browse the table of food items below and select the product you plan to eat.</li>
+    <li><strong>Choose the Amount:</strong> Enter the amount you are going to eat.</li>
+    <li><strong>Calculate Nutrition:</strong> The app will automatically calculate the nutritional content based on your selected amount, helping you keep track of your daily intake.</li>
+</ol>
+
+
+<h2 id="productsSubTitle">Types and their color:</h2>
+<ul id="typeDescription">
+    <li><div class="typeCircle circleRed"></div><p>Meat</p></li>
+    <li><div class="typeCircle circleOrange"></div><p>Fruit</p></li>
+    <li><div class="typeCircle circleGreen"></div><p>Vegetable</p></li>
+    <li><div class="typeCircle circleBlue"></div><p>Fish</p></li>
+    <li><div class="typeCircle circleBrown"></div><p>Nuts</p></li>
+    <li><div class="typeCircle circleWhite"></div><p>Dairy</p></li>
+    <li><div class="typeCircle circleYellow"></div><p>Grain</p></li>
+</ul>
+<p class="instructionText">Stay on top of your nutrition and make healthier choices effortlessly with Food Encounter!</p>
+<div id="searchContainer">
+    <form id="searchForm" action="/" method="get">
+        <input id="searchBar" type="text" name="q" placeholder="Search a product" value="<%= q %>">
+        <button type="submit">Search</button>
+    </form>
+</div>
+<form action="/" method="get">
+    <select name="sortField">
+        <option value="name" <%= sortField === "name" ? "selected" : "" %>>Name</option>
+        <option value="calories" <%= sortField === "calories" ? "selected" : "" %>>Calories</option>
+        <option value="protein" <%= sortField === "protein" ? "selected" : "" %>>Protein</option>
+        <option value="dateOfIntake" <%= sortField === "dateOfIntake" ? "selected" : "" %>>Date of last consumption</option>
+        <option value="type" <%= sortField === "type" ? "selected" : "" %>>Type</option>
+    </select>
+    <select name="sortDirection">
+        <option value="asc" <%= sortDirection === "asc" ? "selected" : "" %>>Asc</option>
+        <option value="desc" <%= sortDirection === "desc" ? "selected" : "" %>>Desc</option>
+    </select>
+    <button type="submit">Sort</button>
+</form>
 <table>
     <thead>
         <tr>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Calories</th>
-        <th>Protein</th>
-        <th>Carbohydrates</th>
-        <th>Fats</th>
-        <th>Fiber</th>
-        <th>Vitamin C</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Calories per 100g</th>
+            <th>Protein per 100g</th>
+            <th>Type</th>
+            <th>Date of last consumption</th>
+            <th>Action</th>
         </tr>
     </thead>
-   
     <tbody id="foodTableBody">
-        <% for(let prod of product){%>
-            <% if(prod.dateOfIntake == date){%>  
+        <% products.forEach(product => { %>
             <tr>
-                <td><img class="mainImage" src="<%= prod.imageUrl %>"></td>
-                <td><%= prod.name %></td>
-                <td><%= prod.calories %></td>
-                <td><%= prod.protein %></td>
-                <% for(let nutr of nutrition){%>
-                    <% if(prod.nutritionalInfoId == nutr.id){%>
-                    <td><%= nutr.carbohydrates %></td>
-                    <td><%= nutr.fats %></td>
-                    <td><%= nutr.fiber %></td>
-                    <td><%= nutr.vitaminC %></td>
-                    <%}%>
-                <%}%>
+                <td><img class="mainImage" alt="<%= product.name %>" src="<%= product.imageUrl %>"></td>
+                <td><%= product.name %></td>
+                <td><div class="tdContainer descriptionInTd"><%= product.description %></div></td>
+                <td><%= product.calories %></td>
+                <td><%= product.protein %></td>
+                <td>
+                    <div class="typeCircle center <%= getTypeColor(product.type) %>"></div>
+                </td>
+                <td><%= product.dateOfIntake %></td>
+                <td><button type="button">Eat</button></td>
             </tr>
-            <%}%>
-        <%}%>
+        <% }); %>
     </tbody>
 </table>
 

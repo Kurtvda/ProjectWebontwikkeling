@@ -128,5 +128,18 @@
         "type": "Fruit",
         "tags": ["healthy", "fruit", "healthy fats"],
         "nutritionalInfoId": 110
+    },
+    {
+        "id": 10,
+        "name": "Potato",
+        "description": "A versatile potato, great for baking, boiling, or frying.",
+        "calories": 77,
+        "protein": 2,
+        "isActive": true,
+        "dateOfIntake": "26/05/2024",
+        "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/potato2.jpg",
+        "type": "Vegetable",
+        "tags": ["healthy", "vegetable", "fiber-rich"],
+        "nutritionalInfoId": 110
     }
 ]
