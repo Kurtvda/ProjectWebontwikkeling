@@ -1,5 +1,6 @@
 <%- include("partials/header") %>
-<h1>Your meals today</h1>
+<h1>Your meals today <%= date %></h1>
+<p id="consumptionSubTitle">You have consumed a total of:</p>
 <ul id="totalList">
     <% for(let i = 0; i < intakeToday.length; i++){%>
         <li>
@@ -11,23 +12,35 @@
 <table>
     <thead>
         <tr>
-        <th>image</th>
+        <th>Image</th>
         <th>Name</th>
-        <th>Date of Intake</th>
         <th>Calories</th>
         <th>Protein</th>
+        <th>Carbohydrates</th>
+        <th>Fats</th>
+        <th>Fiber</th>
+        <th>Vitamin C</th>
         </tr>
     </thead>
    
     <tbody id="foodTableBody">
         <% for(let prod of product){%>
+            <% if(prod.dateOfIntake == date){%>  
             <tr>
                 <td><img class="mainImage" src="<%= prod.imageUrl %>"></td>
                 <td><%= prod.name %></td>
-                <td><%= prod.dateOfIntake %></td>
                 <td><%= prod.calories %></td>
                 <td><%= prod.protein %></td>
+                <% for(let nutr of nutrition){%>
+                    <% if(prod.nutritionalInfoId == nutr.id){%>
+                    <td><%= nutr.carbohydrates %></td>
+                    <td><%= nutr.fats %></td>
+                    <td><%= nutr.fiber %></td>
+                    <td><%= nutr.vitaminC %></td>
+                    <%}%>
+                <%}%>
             </tr>
+            <%}%>
         <%}%>
     </tbody>
 </table>

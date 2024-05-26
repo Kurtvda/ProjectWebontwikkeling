@@ -5,7 +5,7 @@ import { fetchApiData } from './fetchApi';
 import { ProductI, NutritionI } from './Interfaces';
 
 import { TotalIntakeToday } from './TotalIntakeToday';
-
+import { DateToday } from "./getDateToday";
 
 const app = express();
 
@@ -16,22 +16,27 @@ app.use(express.static("public"));
 let product: ProductI[] = [];
 let nutrition: NutritionI[] = [];
 
-let intakeToday : string[] = TotalIntakeToday();
+let intakeToday: string[] = [];
 
 fetchApiData().then((data) => {
   product = data.product;
   nutrition = data.nutrition;
+  intakeToday = TotalIntakeToday(DateToday());
 }).catch((error) => {
   console.log(error);
 });
 
 
 app.get("/", (req, res) => {
+  console.log(intakeToday);
+  let date = DateToday();
+  console.log(date);
   res.render('index', { 
                         activeLink: 'home',
                         product : product,
                         nutrition : nutrition,
-                        intakeToday: intakeToday
+                        intakeToday: intakeToday,
+                        date : date
                       });
 });
 app.get("/products", (req, res) => { 

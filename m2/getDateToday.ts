@@ -4,5 +4,11 @@ export function DateToday() : string {
     const month = currentDate.getMonth() + 1;
     const day = currentDate.getDate();
 
-    return `${year}-${month}-${day}`;
+    if(month < 10){
+        return `${day}-0${month}-${year}`;
+    }
+    else{
+        return `${day}-${month}-${year}`;
+    }
+    
 }
