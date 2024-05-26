@@ -371,7 +371,7 @@ button:hover {
     letter-spacing: 0px;
 }
 
-#searchForm button {
+#searchForm button, #sortOptionContainer button {
     padding: 0.5rem 1rem;
     border: 1px solid #ccc;
     border-left: none;
@@ -383,6 +383,30 @@ button:hover {
     letter-spacing: 0px;
 }
 
-#searchBar:active, #searchBar:focus{
+#searchBar:active, #searchBar:focus, #sortOptionContainer select:focus, #sortOptionContainer select:active{
     outline: none;
 }
+
+#sortOptionContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    width: 90%;
+    margin: 0 auto;
+}
+#sortOptionContainer select{
+    width: 20%;
+    padding: 0.5rem;
+    border: 1px solid var(--green);
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+
+    font: normal normal 500 16px/12px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+}
+#sortOptionContainer button{
+    padding: 0 25px;
+}
+

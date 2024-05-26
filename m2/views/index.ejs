@@ -48,7 +48,7 @@
         <button type="submit">Search</button>
     </form>
 </div>
-<form action="/" method="get">
+<form id="sortOptionContainer" action="/" method="get">
     <select name="sortField">
         <option value="name" <%= sortField === "name" ? "selected" : "" %>>Name</option>
         <option value="calories" <%= sortField === "calories" ? "selected" : "" %>>Calories</option>

@@ -1,17 +1,26 @@
 import express from "express";
 import ejs from "ejs";
 
+import { main } from './database';
+
 import { fetchApiData } from './fetchApi';
 import { ProductI, NutritionI } from './Interfaces';
 
 import { TotalIntakeToday } from './TotalIntakeToday';
 import { DateToday } from "./getDateToday";
 
+
+
 const app = express();
 
 app.set("view engine", "ejs"); // EJS als view engine
 app.set("port", 3000);
 app.use(express.static("public"));
+
+// app.listen(3001, async () => {
+//   await connect();
+//   console.log("Server is running on port 3001");
+// });
 
 let products: ProductI[] = [];
 let nutritions: NutritionI[] = [];
@@ -27,8 +36,10 @@ fetchApiData().then((data) => {
   console.log(error);
 });
 
+main();
 
 app.get("/", (req, res) => {
+  
   let q : string = req.query.q as string || "";
 
   const sortField = typeof req.query.sortField === "string" ? req.query.sortField : "name";
@@ -48,7 +59,7 @@ app.get("/", (req, res) => {
   ];
 
   let filteredProduct: ProductI[] = products.filter((prod) => {
-    return prod.name.toLowerCase().startsWith(q.toLowerCase());
+    return prod.name.toLowerCase().includes(q.toLowerCase());
   });
 
   filteredProduct.sort((a, b) =>  {
@@ -71,7 +82,7 @@ app.get("/", (req, res) => {
         return 0;
     }
   });
-    res.render('index', { 
+    res.render('index', {
       activeLink: 'home',
       products : filteredProduct,
       nutrition : nutritions,
