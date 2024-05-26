@@ -1,4 +1,36 @@
 <%- include("partials/header") %>
+<h1>Your meals today</h1>
+<ul id="totalList">
+    <% for(let i = 0; i < intakeToday.length; i++){%>
+        <li>
+            <%= intakeToday[i] %>
+        </li>
+    <%}%>
+</ul>
+
+<table>
+    <thead>
+        <tr>
+        <th>image</th>
+        <th>Name</th>
+        <th>Date of Intake</th>
+        <th>Calories</th>
+        <th>Protein</th>
+        </tr>
+    </thead>
+   
+    <tbody id="foodTableBody">
+        <% for(let prod of product){%>
+            <tr>
+                <td><img class="mainImage" src="<%= prod.imageUrl %>"></td>
+                <td><%= prod.name %></td>
+                <td><%= prod.dateOfIntake %></td>
+                <td><%= prod.calories %></td>
+                <td><%= prod.protein %></td>
+            </tr>
+        <%}%>
+    </tbody>
+</table>
 
 <script src="/js/logoAnimation.js"></script>
 <%- include("partials/footer") %>

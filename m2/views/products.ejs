@@ -12,15 +12,40 @@
         <th>Action</th>
         </tr>
     </thead>
+    <%
+    function getTypeColor(type) {
+        switch (type) {
+        case "Meat":
+            return "circleRed";
+        case "Fruit":
+            return "circleOrange";
+        case "Vegetable":
+            return "circleGreen";
+        case "Fish":
+            return "circleBlue";
+        case "Nuts":
+            return "circleBrown";
+        case "Dairy":
+            return "circleWhite";
+        case "Grain":
+            return "circleYellow";
+        default:
+            return "";
+        }
+    }
+    %>
     <tbody id="foodTableBody">
         <% for(let prod of product){%>
             <tr>
                 <td><img class="mainImage" src="<%= prod.imageUrl %>"></td>
                 <td><%= prod.name %></td>
-                <td><div class="tdContainer"><%= prod.description %></div></td>
+                <td><div class="tdContainer descriptionInTd"><%= prod.description %></div></td>
                 <td><%= prod.calories %></td>
                 <td><%= prod.protein %></td>
-                <td><img class="typeIcon" src="./images/<%=prod.type%>_icon.svg" width="40"></td>
+                <td>
+                    <div class="typeCircle <%= getTypeColor(prod.type) %>"></div>
+                    <!-- <img class="typeIcon" src="./images/<%=prod.type%>_icon.svg" width="40"> -->
+                </td>
                 <td><%= prod.dateOfIntake %></td>
                 <td><button>Action</button></td>
             </tr>
