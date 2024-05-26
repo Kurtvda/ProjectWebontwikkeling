@@ -130,7 +130,7 @@
         "nutritionalInfoId": 110
     },
     {
-        "id": 10,
+        "id": 11,
         "name": "Potato",
         "description": "A versatile potato, great for baking, boiling, or frying.",
         "calories": 77,
@@ -140,6 +140,6 @@
         "imageUrl": "https://raw.githubusercontent.com/Kurtvda/ProjectWebontwikkeling/main/m2/public/images/potato2.jpg",
         "type": "Vegetable",
         "tags": ["healthy", "vegetable", "fiber-rich"],
-        "nutritionalInfoId": 110
+        "nutritionalInfoId": 111
     }
 ]
